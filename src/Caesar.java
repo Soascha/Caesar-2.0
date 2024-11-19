@@ -1,3 +1,5 @@
+package src;
+
 public class Caesar {
     private String Kt;
     private int S;
@@ -7,26 +9,27 @@ public class Caesar {
         Kt ="";
     }
     public void verschluesseln(){
-        for (int i=0 ;i < Kt.length();i++) {
+        Gt = "";
+        for (int i = 0 ; i < Kt.length() ; i++) {
             int h = this.getASCII(Kt.charAt(i));
             Gt = Gt + this.getChar(h + S);
         }
 
     }
     public void entschluesseln(){
-
+        Kt = "";
+        for (int i = 0; i < Gt.length() ; i++) {
+            int k = this.getASCII(Gt.charAt(i));
+            Kt = Kt + this.getChar(k - S);
+        }
 
 
     }
-    private int getASCII (char pWert){
+    private int getASCII (char pWert) {
         return  pWert;
     }
-    private char getChar(int pWert){
+    private char getChar(int pWert) {
         return (char) pWert;
-    }
-
-    public String getKt(){
-        return Kt;
     }
 
     public void setKt(String kt) {
@@ -37,11 +40,19 @@ public class Caesar {
         S = s;
     }
 
-    public int getS(){
+    public void setGt(String gt) {
+        Gt = gt;
+    }
+
+    public int getS() {
         return S;
     }
 
-    public String getGt(){
+    public String getGt() {
         return Gt;
+    }
+
+    public String getKt() {
+        return Kt;
     }
 }
