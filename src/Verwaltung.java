@@ -6,8 +6,6 @@ public class Verwaltung {
     private Scanner scanner;
     private Caesar caesar;
 
-    private Viginere viginere;
-
     public static void main(String[] args) {
         new Verwaltung();
     }
@@ -23,39 +21,24 @@ public class Verwaltung {
             if (option == 1) {
                 System.out.println("Gib das Wort an, welches Sie verschluesseln wollen:");
                 String zeichenkette = scanner.nextLine();
-
                 System.out.println("Gib den Schlüssel an:");
                 String schluesselString = scanner.nextLine();
-
                 int schluessel = Integer.parseInt(schluesselString);
-
                 caesar = new Caesar();
-
                 this.caesar.setKt(zeichenkette);
-
                 this.caesar.setS(schluessel);
-
                 this.caesar.verschluesseln();
-
                 System.out.println(this.caesar.getGt());
-
             }else if (option == 2) {
                 System.out.println("Gib das Wort an, welches Sie entschluesseln wollen:");
                 String zeichenkette = scanner.nextLine();
-
                 System.out.println("Gib den Schlüssel an:");
                 String schluesselString = scanner.nextLine();
-
                 int schluessel = Integer.parseInt(schluesselString);
-
                 caesar = new Caesar();
-
                 this.caesar.setGt(zeichenkette);
-
                 this.caesar.setS(schluessel);
-
                 this.caesar.entschluesseln();
-
                 System.out.println(this.caesar.getKt());
             }
         }
