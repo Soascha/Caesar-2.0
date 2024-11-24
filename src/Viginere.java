@@ -1,29 +1,39 @@
 package src;
 
 public class Viginere {
+
     private String Kt;
+
     private String S;
+
     private String Gt;
 
     public Viginere() {
         Gt = "";
         Kt = "";
+        S = "";
     }
 
     public void verschluesseln() {
-
+        for ( int i = 0 ; i < Kt.length() ; i++) {
+            int j = this.getASCII(Kt.charAt(i));
+            int h = this.getASCII(S.charAt(i));
+            Gt = Gt + this.getChar(j + h);
+        }
     }
 
     public void entschluesseln() {
-
+        for (int i = 0; i < Gt.length(); i++) {
+            int n = this.getASCII(Gt.charAt(i));
+            int m = this.getASCII(S.charAt(i));
+            Kt = Kt + this.getChar(n - m);
+        }
     }
-
-    private char zahlenZuBuchstaben(int pWert) {
-        return (char) pWert ;
+    private int getASCII (char pWert) {
+        return  pWert;
     }
-
-    private int buchstabenZuZahlen(char pWert) {
-        return (int) pWert ;
+    private char getChar(int pWert) {
+        return (char) pWert;
     }
 
     public void setGt(String pGt) {
@@ -41,11 +51,11 @@ public class Viginere {
         return Kt;
     }
 
-    public void setS (String S){
-        S = s;
+    public void setS (String pS) {
+        S =  pS;
     }
 
-    public int getS () {
+    public String getS () {
         return S;
     }
 
