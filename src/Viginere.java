@@ -1,5 +1,7 @@
 package src;
 
+public class Vigenere extends Kryptomat  {
+
 public class Viginere {
 
     private String Kt;
@@ -58,6 +60,6 @@ public class Viginere {
     public String getS () {
         return S;
     }
-
+}
 
 }
