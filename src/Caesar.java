@@ -1,5 +1,7 @@
 package src;
 
+public class Caesar extends Kryptomat  {
+
 public class Caesar {
     private String Kt;
     private int S;
