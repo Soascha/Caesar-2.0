@@ -1,4 +1,3 @@
-package src;
 public abstract class Kryptomat {
     protected String gt;
     protected String kt;

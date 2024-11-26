@@ -1,5 +1,3 @@
-package src;
-
 public class Viginere extends Kryptomat  {
         private String Kt;
 
