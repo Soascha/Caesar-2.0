@@ -1,36 +1,38 @@
 package src;
 
-public class Caesar extends Kryptomat  {
+public class Caesar extends Kryptomat {
 
-public class Caesar {
     private String Kt;
     private int S;
     private String Gt;
-    public Caesar(){
-        Gt ="";
-        Kt ="";
-    }
-    public void verschluesseln(){
+
+    public Caesar() {
         Gt = "";
-        for (int i = 0 ; i < Kt.length() ; i++) {
+        Kt = "";
+    }
+
+    public void verschluesseln() {
+        Gt = "";
+        for (int i = 0; i < Kt.length(); i++) {
             int h = this.getASCII(Kt.charAt(i));
             Gt = Gt + this.getChar(h + S);
         }
 
     }
-    public void entschluesseln(){
+
+    public void entschluesseln() {
         Kt = "";
-        for (int i = 0; i < Gt.length() ; i++) {
+        for (int i = 0; i < Gt.length(); i++) {
             int k = this.getASCII(Gt.charAt(i));
             Kt = Kt + this.getChar(k - S);
         }
-
-
     }
-    private int getASCII (char pWert) {
-        return  pWert;
+
+    public int getASCII(char pWert) {
+        return pWert;
     }
-    private char getChar(int pWert) {
+
+    public char getChar(int pWert) {
         return (char) pWert;
     }
 
