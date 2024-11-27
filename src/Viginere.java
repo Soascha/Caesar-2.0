@@ -26,27 +26,6 @@ public class Viginere extends Kryptomat  {
                 Kt = Kt + this.getChar(n - m);
             }
         }
-        public int getASCII (char pWert) {
-            return  pWert;
-        }
-        public char getChar(int pWert) {
-            return (char) pWert;
-        }
-
-        public void setGt(String pGt) {
-            Gt = pGt;
-        }
-
-        public String getGt() {
-            return Gt;
-        }
-        public void setKt (String pKt){
-            Kt = pKt;
-        }
-
-        public String getKt() {
-            return Kt;
-        }
 
         public void setS (String pS) {
             S =  pS;

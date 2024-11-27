@@ -26,35 +26,10 @@ public class Caesar extends Kryptomat {
         }
     }
 
-    public int getASCII(char pWert) {
-        return pWert;
-    }
-
-    public char getChar(int pWert) {
-        return (char) pWert;
-    }
-
-    public void setKt(String kt) {
-        Kt = kt;
-    }
-
     public void setS(int s) {
         S = s;
     }
-
-    public void setGt(String gt) {
-        Gt = gt;
-    }
-
     public int getS() {
         return S;
-    }
-
-    public String getGt() {
-        return Gt;
-    }
-
-    public String getKt() {
-        return Kt;
     }
 }

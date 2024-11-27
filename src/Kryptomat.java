@@ -5,9 +5,9 @@ public abstract class Kryptomat {
     public Kryptomat(){
     }
 
-    public abstract void verschluesseln();
+    protected abstract void verschluesseln();
 
-    public abstract void entschluesseln();
+    protected abstract void entschluesseln();
 
     protected char getChar(int pWert){
         return (char) pWert;
