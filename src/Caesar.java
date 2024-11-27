@@ -1,60 +1,34 @@
 public class Caesar extends Kryptomat {
 
-    private String Kt;
+
     private int S;
-    private String Gt;
+
 
     public Caesar() {
-        Gt = "";
-        Kt = "";
+       super();
+       S = 0;
     }
 
     public void verschluesseln() {
-        Gt = "";
-        for (int i = 0; i < Kt.length(); i++) {
-            int h = this.getASCII(Kt.charAt(i));
-            Gt = Gt + this.getChar(h + S);
+        gt = "";
+        for (int i = 0; i < kt.length(); i++) {
+            int h = this.getASCII(kt.charAt(i));
+            gt = gt + this.getChar(h + S);
         }
-
     }
 
     public void entschluesseln() {
-        Kt = "";
-        for (int i = 0; i < Gt.length(); i++) {
-            int k = this.getASCII(Gt.charAt(i));
-            Kt = Kt + this.getChar(k - S);
+        kt = "";
+        for (int i = 0; i < gt.length(); i++) {
+            int k = this.getASCII(gt.charAt(i));
+            kt = kt + this.getChar(k - S);
         }
-    }
-
-    public int getASCII(char pWert) {
-        return pWert;
-    }
-
-    public char getChar(int pWert) {
-        return (char) pWert;
-    }
-
-    public void setKt(String kt) {
-        Kt = kt;
     }
 
     public void setS(int s) {
         S = s;
     }
-
-    public void setGt(String gt) {
-        Gt = gt;
-    }
-
     public int getS() {
         return S;
-    }
-
-    public String getGt() {
-        return Gt;
-    }
-
-    public String getKt() {
-        return Kt;
     }
 }

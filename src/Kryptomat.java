@@ -3,11 +3,13 @@ public abstract class Kryptomat {
     protected String kt;
 
     public Kryptomat(){
+        gt ="";
+        kt="";
     }
 
-    public abstract void verschluesseln();
+    protected abstract void verschluesseln();
 
-    public abstract void entschluesseln();
+    protected abstract void entschluesseln();
 
     protected char getChar(int pWert){
         return (char) pWert;
