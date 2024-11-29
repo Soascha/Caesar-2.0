@@ -3,9 +3,8 @@ public class Viginere extends Kryptomat  {
         private String S;
 
         public Viginere() {
-            gt = "";
-            kt = "";
-            S = "";
+            super();
+            S =  "";
         }
 
         public void verschluesseln() {
