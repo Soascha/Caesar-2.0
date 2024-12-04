@@ -14,15 +14,17 @@ public class Polybius extends Kryptomat {
                 for (int i = 1 ; i < 6 ; i++)
 
                 {
-                        for (int j  = 1 ; j < 6 ; j++)
-
-                        {
+                        for (int j  = 1 ; j < 6 ; j++) {
                                 alphabetQuadrat[i][j] = ASCII;
 
-                                if(ASCII == 73)
+                                if (ASCII == 73) // wenn i
 
                                 {
-                                        ASCII = ASCII+2;
+                                        ASCII = ASCII + 2;
+                                } else
+
+                                {
+                                        ASCII++;
                                 }
 
                         }
@@ -30,7 +32,10 @@ public class Polybius extends Kryptomat {
         }
 
         public void verschluesseln() {
+                bfmS();
+                for ( int i = 0 ; i < kt.length() ; i++) {
 
+                }
         }
 
         public void entschluesseln(){
