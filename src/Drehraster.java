@@ -11,18 +11,14 @@ public class Drehraster extends Kryptomat{
     }
 
     public void verschluesseln() {
-
-        for (int i = 0; i < kt.length(); i++) {
-
-            for (int y = 0; y < kt.length() / S; y++) {
+        int i = 0;
+        for (int y = 0; y < kt.length() / S; y++) {
 
                 for (int x = 0; x < S; x++) {
-
                     zDrehraster[y][x] = kt.charAt(i);
-
+                    i++;
                 }
             }
-        }
     }
 
     public void setS (int pS) {
